@@ -18,8 +18,6 @@ public class SealDisapear : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MoveSeal();
-
         timer += Time.deltaTime;
         if (timer >= nextDisapearTime && isVisible) //if the seal is visible and its been between 5-10 seconds, hide the seal
         {
@@ -43,14 +41,5 @@ public class SealDisapear : MonoBehaviour
         isVisible = true;
 
         gameObject.SetActive(true);
-    }
-
-
-    void MoveSeal()
-    {
-        speed = Random.Range(1f, 6f);
-        sealMoveDirection = new Vector3(Random.Range(-10f, 10f), 0f, Random.Range(-10f, 10f));
-        //seal.GetComponent<Rigidbody>().AddForce...
-        this.transform.position += sealMoveDirection * speed * Time.deltaTime;
     }
 }
