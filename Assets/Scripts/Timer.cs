@@ -9,6 +9,9 @@ public class Timer : MonoBehaviour
     public TextMeshProUGUI timerText;
     public GameObject youLose;
     public GameObject youWin;
+    public TextMeshProUGUI youWinText;
+    public TextMeshProUGUI youLoseText;
+    public TextMeshProUGUI finalNumberText;
 
     public SealSpawner sealSpawnerScript;
     public PlayerCounter playerCounterScript;
@@ -20,7 +23,7 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        if(remainingTime > 0)
+        if (remainingTime > 0)
         {
             remainingTime -= Time.deltaTime;
             int minutes = Mathf.FloorToInt(remainingTime / 60);
@@ -29,17 +32,23 @@ public class Timer : MonoBehaviour
         }
         else
         {
+            finalNumberText.text = "The final number is " + sealSpawnerScript.numberOfSeals; //displays the final number of seals whether u win OR lose
+            finalNumberText.gameObject.SetActive(true);
+
             playerCounterScript.allowCounting = false; //player no longer allowed to count (mostly to stop sound effects)
+
             if (sealSpawnerScript.numberOfSeals == playerCounterScript.currentNumber)
             {
                 Debug.Log("Player wins!");
                 youWin.SetActive(true);
+                youWinText.gameObject.SetActive(true);
 
             }
             else
             {
                 Debug.Log("Player loses!");
                 youLose.SetActive(true);
+                youLoseText.gameObject.SetActive(true);
             }
         }
     }
