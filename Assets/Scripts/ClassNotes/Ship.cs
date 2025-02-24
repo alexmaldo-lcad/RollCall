@@ -24,6 +24,16 @@ public class Ship : MonoBehaviour
         FireEvenCannons();
 
         FireOddCannons();
+
+        if (Input.GetKeyDown(KeyCode.S)) //this syntax is more correct as we want the if statement to be happening in update rather than inside a function
+        {
+            FireAllPowerfulCannons();
+        }
+
+        if(Input.GetKeyDown(KeyCode.W))
+        {
+            FireAllWeakCannons();
+        }
     }
 
     void FireAllcannons()
@@ -62,6 +72,28 @@ public class Ship : MonoBehaviour
                 {
                     cannons[i].FireCannon();
                 }
+            }
+        }
+    }
+
+    void FireAllPowerfulCannons()
+    {
+     foreach(Cannon c in cannons)
+        {
+            if(c.forcePower > 4500)
+            {
+                c.FireCannon();
+            }
+        }
+    }
+
+    void FireAllWeakCannons()
+    {
+        for(int i = 0; i < cannons.Count; i++) //start at 0, check if i is less than the number in your list, then at the end of the loop add 1 to i
+        {
+            if (cannons[i].forcePower < 4500)
+            {
+                cannons[i].FireCannon();
             }
         }
     }

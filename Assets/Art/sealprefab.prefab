@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3394162107331997340}
   - component: {fileID: 2846612305553840767}
   - component: {fileID: 3012896530136860485}
-  - component: {fileID: 787513174365946692}
+  - component: {fileID: 7185374239114200202}
   m_Layer: 0
   m_Name: sealprefab
   m_TagString: Seal
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 2899831908572496113}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.9872484, y: 4.8, z: 0.7999999}
+  m_LocalPosition: {x: -0.08199501, y: 1, z: -1.5092466}
   m_LocalScale: {x: 1.390853, y: 1.390853, z: 1.390853}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -137,7 +137,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &787513174365946692
+--- !u!114 &7185374239114200202
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,4 +149,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53e8f30ca895f9c4d8f16640eb8d34ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfSeals: {fileID: 0}
+  timer: 0
+  speed: 0
+  sealMoveDirection: {x: 0, y: 0, z: 0}

@@ -243,7 +243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cannonballPrefab: {fileID: 2899831908572496113, guid: 1300a993abc5a3c4996f01718af21832, type: 3}
   cannonballSpawnPosition: {fileID: 825800727}
-  forcePower: 3000
+  forcePower: 10000
 --- !u!1 &103755980
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,7 +340,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cannonballPrefab: {fileID: 2899831908572496113, guid: 1300a993abc5a3c4996f01718af21832, type: 3}
   cannonballSpawnPosition: {fileID: 1096681650}
-  forcePower: 3000
+  forcePower: 6000
 --- !u!65 &462301427
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -785,7 +785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cannonballPrefab: {fileID: 2899831908572496113, guid: 1300a993abc5a3c4996f01718af21832, type: 3}
   cannonballSpawnPosition: {fileID: 1035965375}
-  forcePower: 3000
+  forcePower: 5000
 --- !u!65 &1036477799
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -910,7 +910,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cannonballPrefab: {fileID: 2899831908572496113, guid: 1300a993abc5a3c4996f01718af21832, type: 3}
   cannonballSpawnPosition: {fileID: 103755981}
-  forcePower: 3000
+  forcePower: 4000
 --- !u!65 &1065682055
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1352,7 +1352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cannonballPrefab: {fileID: 2899831908572496113, guid: 1300a993abc5a3c4996f01718af21832, type: 3}
   cannonballSpawnPosition: {fileID: 1574836142}
-  forcePower: 3000
+  forcePower: 600
 --- !u!65 &1827963140
 BoxCollider:
   m_ObjectHideFlags: 0

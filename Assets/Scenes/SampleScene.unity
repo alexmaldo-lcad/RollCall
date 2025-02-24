@@ -222,7 +222,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.70710707, z: -0, w: 0.70710653}
   m_LocalPosition: {x: -0.1, y: 0.3, z: -9.243199}
-  m_LocalScale: {x: 0.8158989, y: 30.368677, z: 27.667988}
+  m_LocalScale: {x: 1.4833026, y: 30.368677, z: 27.667988}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -405,7 +405,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.70710707, z: -0, w: 0.70710653}
   m_LocalPosition: {x: -0.1, y: 0.3, z: 5.6879}
-  m_LocalScale: {x: 0.8158989, y: 38.868984, z: 27.667988}
+  m_LocalScale: {x: 2.4742765, y: 38.868984, z: 27.667988}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -580,8 +580,8 @@ MonoBehaviour:
   timerText: {fileID: 787708193}
   youLose: {fileID: 1597697244}
   youWin: {fileID: 2035309620}
-  numberOfSeals: {fileID: 1908760613}
-  currentNumber: {fileID: 743130619}
+  sealSpawnerScript: {fileID: 1908760613}
+  playerCounterScript: {fileID: 743130619}
 --- !u!4 &407998184
 Transform:
   m_ObjectHideFlags: 0
@@ -1032,7 +1032,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 13.7186775, y: 0.3, z: -2.0630999}
-  m_LocalScale: {x: 0.8498325, y: 19.877388, z: 15.666889}
+  m_LocalScale: {x: 1.4575477, y: 19.877388, z: 15.666889}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1592,7 +1592,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -13.868322, y: 0.3, z: -2.0630999}
-  m_LocalScale: {x: 0.8498325, y: 33.652905, z: 15.666889}
+  m_LocalScale: {x: 1.6767195, y: 33.652905, z: 15.666889}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2370,9 +2370,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sealPrefab: {fileID: 2899831908572496113, guid: 1300a993abc5a3c4996f01718af21832, type: 3}
   sealSpawnPosition: {x: 0, y: 0, z: 0}
-  sealMoveDirection: {x: 0, y: 0, z: 0}
-  speed: 0
   numberOfSeals: 0
+  seals: []
 --- !u!4 &1908760614
 Transform:
   m_ObjectHideFlags: 0

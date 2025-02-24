@@ -3,10 +3,11 @@ using UnityEngine;
 public class SealDisapear : MonoBehaviour
 {
     public float timer = 0f;
-
     private float nextDisapearTime; //randomly between 5 and ten seconds
-
     private bool isVisible = true;
+
+    public float speed;
+    public Vector3 sealMoveDirection;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -17,14 +18,15 @@ public class SealDisapear : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        MoveSeal();
+
         timer += Time.deltaTime;
-        
         if (timer >= nextDisapearTime && isVisible) //if the seal is visible and its been between 5-10 seconds, hide the seal
         {
             HideSeal();
         }
     }
-    private void HideSeal()
+    void HideSeal()
     {
         isVisible = false;
 
@@ -36,11 +38,19 @@ public class SealDisapear : MonoBehaviour
 
         Invoke("ShowSeal", 1f); //will show the seal again after 1 second
     }
-    private void ShowSeal() //shows seal again
+    void ShowSeal() //shows seal again
     {
         isVisible = true;
 
         gameObject.SetActive(true);
     }
-  
+
+
+    void MoveSeal()
+    {
+        speed = Random.Range(1f, 6f);
+        sealMoveDirection = new Vector3(Random.Range(-10f, 10f), 0f, Random.Range(-10f, 10f));
+        //seal.GetComponent<Rigidbody>().AddForce...
+        this.transform.position += sealMoveDirection * speed * Time.deltaTime;
+    }
 }

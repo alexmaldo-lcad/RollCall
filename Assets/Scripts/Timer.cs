@@ -5,29 +5,32 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public float remainingTime;
+    public float remainingTime = 30;
     public TextMeshProUGUI timerText;
     public GameObject youLose;
     public GameObject youWin;
-    public SealSpawner numberOfSeals;
-    public PlayerCounter currentNumber;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public SealSpawner sealSpawnerScript;
+    public PlayerCounter playerCounterScript;
+
     void Start()
     {
        
     }
 
-    // Update is called once per frame
     void Update()
     {
-        remainingTime -= Time.deltaTime;
-        int minutes = Mathf.FloorToInt(remainingTime / 60);
-        int seconds = Mathf.FloorToInt(remainingTime % 60);
-        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-        if (remainingTime <= 0)
+        if(remainingTime > 0)
         {
-            if (numberOfSeals == currentNumber)
+            remainingTime -= Time.deltaTime;
+            int minutes = Mathf.FloorToInt(remainingTime / 60);
+            int seconds = Mathf.FloorToInt(remainingTime % 60);
+            timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        }
+        else
+        {
+            playerCounterScript.allowCounting = false; //player no longer allowed to count (mostly to stop sound effects)
+            if (sealSpawnerScript.numberOfSeals == playerCounterScript.currentNumber)
             {
                 Debug.Log("Player wins!");
                 youWin.SetActive(true);
@@ -38,7 +41,6 @@ public class Timer : MonoBehaviour
                 Debug.Log("Player loses!");
                 youLose.SetActive(true);
             }
-
         }
     }
 }
