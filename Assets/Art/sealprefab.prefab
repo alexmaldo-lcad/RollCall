@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 2899831908572496113}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.9678164, y: 1, z: 1.4764144}
+  m_LocalPosition: {x: 5.821296, y: 1, z: -5.1937685}
   m_LocalScale: {x: 1.390853, y: 1.390853, z: 1.390853}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -167,4 +167,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   sealMoveDirection: {x: 0, y: 0, z: 0}
-  boing: {fileID: 0}

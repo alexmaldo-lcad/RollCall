@@ -4,7 +4,6 @@ public class SealMover : MonoBehaviour
 {
     public float speed;
     public Vector3 sealMoveDirection;
-    public AudioSource boing;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,8 +19,4 @@ public class SealMover : MonoBehaviour
         this.transform.position += sealMoveDirection * speed * Time.deltaTime;
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        boing.Play();
-    }
 }
